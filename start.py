@@ -1,4 +1,5 @@
-# This is where all the programs will run
+# E-Commerce Website
+# This is the website I am building for my coursework
 
 # import flask | redirect user to a web page | url_for is used for creating a URL 
 # to prevent the overhead of having to change URLs 
