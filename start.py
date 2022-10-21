@@ -1,10 +1,14 @@
 # This is where all the programs will run
 
-# import 
-from flask import Flask
+# import flask | redirect user to a web page | url_for is used for creating a URL 
+# to prevent the overhead of having to change URLs 
+# throughout the application (including in templates)
+from fileinput import filename
+from os import abort
+from flask import Flask, redirect, url_for, request, render_template
 
 app = Flask(__name__)
 
-@app.route('/')
-def start():
-    return 'Coursework!'
+@app.route('/home/')
+def home():
+    return render_template('home.html')

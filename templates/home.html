@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--From
+            https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_navbar_icon-->
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"> <!--For social media icons-->
+            <link href="style1.css" rel="stylesheet"> <!--This links to the style1.css-->
+            <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!--For icons-->
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>E-Commerce | Home </title>
+            <link rel="icon" href="" type="image/x-icon"> <!--add icon link. This icon will show next to Title 
+            of the page-->
+    </head>
+    <body style="background-color: #d4dadc;">
+        {% block content %}{% endblock content %}
+        <!--Start-->
+        
+        <!--Create a nav bar section-->
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">E-commerce</label> <!--Sort of header (or logo) in the navbar-->
+            <ul> <!--This are sections in the navbar-->
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="#">Sign Up | Login</a></li>
+            </ul>
+        </nav>
+    
+        <!--A new section-->
+        <section></section>
+    </body>
+    </html>
