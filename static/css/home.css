@@ -115,7 +115,7 @@ a.active, a:hover{
 }
 
 section{
-    background: url('/static/image/bg1.jpeg') no-repeat;  /*Remeber to add '/' before static, for it to link to the image*/
+    background: url('/static/image/bg1.jpg') no-repeat;  /*Remeber to add '/' before static, for it to link to the image*/
     background-size: cover;
     height: calc(100vh - 80px);
 }
