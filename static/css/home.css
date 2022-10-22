@@ -119,3 +119,21 @@ section{
     background-size: cover;
     height: calc(100vh - 80px);
 }
+
+/*This is for the text on the background image*/
+#content{
+    display: inline-block;
+    height: 80vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.45);
+}
+
+#text_position{
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    color: white;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 150px;
+}
