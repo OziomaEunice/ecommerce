@@ -164,6 +164,7 @@ and the other for the buyer.*/
     height: 200px;
     width: 200px;
     border: 2px solid black;
+    border-radius: 10px;
     box-shadow: 5px 5px 10px black;
     text-align: center;
 }
@@ -173,6 +174,7 @@ and the other for the buyer.*/
     height: 200px;
     width: 200px;
     border: 2px solid black;
+    border-radius: 10px;
     box-shadow: 5px 5px 10px black;
     text-align: center;
 }
