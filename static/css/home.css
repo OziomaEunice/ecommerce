@@ -138,3 +138,10 @@ section{
     text-align: center;
     margin-top: 150px;
 }
+
+#content_2{
+    display: inline-block;
+    height: 80vh;
+    width: 100%;
+    background-color: rgba(255,255,255,0.45);
+}
