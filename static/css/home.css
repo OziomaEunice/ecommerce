@@ -146,3 +146,33 @@ section{
     width: 100%;
     background-color: rgba(255,255,255,0.45);
 }
+
+/*There will be two boxes that will be displayed. One for the seller 
+and the other for the buyer.*/
+.parent_box{
+    width: 50%;
+}
+
+.child_box{
+    float: left;
+    width: 50%;
+    margin-top: 75px;
+}
+
+.box1{
+    margin-left: 100%;
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    box-shadow: 5px 5px 10px black;
+    text-align: center;
+}
+
+.box2{
+    margin-left: 140%;
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    box-shadow: 5px 5px 10px black;
+    text-align: center;
+}
