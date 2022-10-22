@@ -115,13 +115,9 @@ a.active, a:hover{
 }
 
 section{
-    background: url(bg1.jpg) no-repeat center center fixed; /*Remeber to add '/' before static, for it to link to the image*/
-    /* background-size: cover; */
-    height: calc(100vh - 80px);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background: url('/static/image/bg1.jpg') no-repeat;  /*Remeber to add '/' before static, for it to link to the image*/
     background-size: cover;
+    height: calc(100vh - 80px);
 }
 
 /*This is for the text on the background image*/
@@ -140,12 +136,4 @@ section{
     flex-direction: column;
     text-align: center;
     margin-top: 150px;
-}
-
-/*This is below content_1*/
-#content_2{
-    display: inline-block;
-    height: 80vh;
-    width: 100%;
-    background-color: rgba(255,255,255,0.45);
 }
