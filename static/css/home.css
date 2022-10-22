@@ -11,9 +11,6 @@
 /*body of the page*/
 body{
     font-family: montserrat;
-    background: url(bg1.jpg) no-repeat; /*Remeber to add '/' before static, for it to link to the image*/
-    background-size: cover;
-    height: calc(100vh - 80px);
 }
 
 /*Layout of the navbar*/
@@ -117,11 +114,11 @@ a.active, a:hover{
     }
 }
 
-/* section{
-    background: url('/static/image/bg1.jpg') no-repeat;  
+section{
+    background: url('/static/image/bg1.jpg') no-repeat;  /*Remeber to add '/' before static, for it to link to the image*/
     background-size: cover;
     height: calc(100vh - 80px);
-} */
+}
 
 /*This is for the text on the background image*/
 #content{
