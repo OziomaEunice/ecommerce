@@ -35,29 +35,16 @@
         </nav>
         {% endblock navbar %}
 
+        {% block text_box %}
+        <div class="text-box">
+            <h1>Welcome!</h1>
+            <p>Sell. Save. Spend</p>
+        </div>
+        {% endblock text_box %}
+
         <!--A new section-->
     <!--Background image-->
     <section> 
-        <!--Text on the background image-->
-        <div id="content_1"> 
-            <div id="text_position">
-                <h1>Welcome!</h1>
-                <p style="font-family: Brush Script MT, cursive;">Sell. Save. Spend</p>
-            </div>
-        </div>
-
-        <!--Sell and Buy boxes-->
-        <div id="content_2">
-            <!--Two boxes displayed-->
-            <div class="parent_box">
-                <div class="child_box">
-                    <div class="box1">Sell</div>
-                </div>
-                <div class="child_box">
-                    <div class="box2">Buy</div>
-                </div>
-            </div>
-        </div>
     </section>
 {% endblock content %}
 </body>
