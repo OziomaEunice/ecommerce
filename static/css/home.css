@@ -10,7 +10,8 @@
 
 /*body of the page*/
 body{
-    font-family: montserrat;
+    /* font-family: montserrat; */
+    font-family: 'Poppins',sans-serif;
 }
 
 /*Layout of the navbar*/
