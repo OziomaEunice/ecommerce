@@ -168,11 +168,29 @@ section{
     }
 }
 
+/*slide animation for text*/
+.slide-left{
+    animation: slideleft 1s linear forwards;
+}
+
+@keyframes slideleft{
+    0%{
+        transform: translate(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+
 /*This is for the seller and buyer boxes*/
 .container2{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    opacity: 0; /*I added this for it not to show in few seconds, for 
+    animation purposes.*/
 }
 
 .container2 .box{
@@ -274,4 +292,8 @@ section{
     font-weight: 500;
     margin-top: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.container2.slide-left{
+    animation-delay: 1.3s;
 }
