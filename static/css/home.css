@@ -165,42 +165,108 @@ section{
     }
 }
 
-/*This will be the section for sell & buy*/
-/* #content_2{
+/*This is for the seller and buyer boxes*/
+.container2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container2 .box{
+    position: relative;
+    width: 350px;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+}
+
+.container2 .box:before{
+    content: '';
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.2);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.container2 .box .icon{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: 700;
+    transition: 1s;
+}
+
+/*--SELL*/
+.container2 .box:nth-child(1) .icon{
+    box-shadow: 0 0 0 0 #e91e63;
+    background: #e91e63;
+}
+
+
+.container2 .box:nth-child(1):hover .icon{
+    box-shadow: 0 0 0 400px #e91e63;
+    background: #e91e63;
+}
+
+/*--BUY*/
+.container2 .box:nth-child(2) .icon{
+    box-shadow: 0 0 0 0 #23e629;
+    background: #23e629;
+}
+
+
+.container2 .box:nth-child(2):hover .icon{
+    box-shadow: 0 0 0 400px #23e629;
+    background: #23e629;
+}
+
+
+.container2 .box .content{
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.container2 .box:hover .content{
+    color: #fff;
+}
+
+.container2 .box .content h3{
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.container2 .box .content p{
+    margin: 0;
+    padding: 0;
+}
+
+.container2 .box .content a{
     display: inline-block;
-    height: 80vh;
-    width: 100%;
-    background-color: rgba(255,255,255,0.45);
-} */
-
-/*There will be two boxes that will be displayed. One for the seller 
-and the other for the buyer.*/
-/* .parent_box{
-    width: 50%;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
-
-.child_box{
-    float: left;
-    width: 50%;
-    margin-top: 200px;
-}
-
-.box1{
-    margin-left: 100%;
-    height: 200px;
-    width: 200px;
-    border: 2px solid black;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px black;
-    text-align: center;
-}
-
-.box2{
-    margin-left: 140%;
-    height: 200px;
-    width: 200px;
-    border: 2px solid black;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px black;
-    text-align: center;
-} */
