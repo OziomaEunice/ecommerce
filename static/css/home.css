@@ -349,3 +349,13 @@ form button{
     font-size: 15px;
     cursor: pointer;
 }
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons i{
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
