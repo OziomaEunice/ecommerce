@@ -112,6 +112,52 @@
             </div>
         </div>
     </div>
+
+    <!--Chatbot-->
+    <div class="chatbot-wrapper">
+        <div class="chatbot-toggle">
+            <i class="bx bx-message-dots"></i>
+        </div>
+        <div class="chatbot-message-wrapper">
+            <div class="chatbot-message-header">
+                <div class="chatbot-message-profile">
+                    <img src="/static/image/profile-teddy-smile.jpg" alt="" class="chatbot-message-image">
+                </div>
+                <div>
+                    <h4 class="chatbot-message-name">ChatBot</h4>
+                    <p class="chatbot-message-status">online</p>
+                </div>
+            </div>
+            <div class="chatbot-message-content">
+                <!-- <h4 class="chatbot-message-no-message">No message sent yet. Start a conversation.</h4> -->
+                <div class="chatbot-message-item sent">
+                    <span class="chatbot-message-item-text">
+                        Hello. Hello. Hello. Ciao. Ciao. Ciao. 
+                    </span>
+                    <span class="chatbot-message-item-time">09:17</span>
+                </div>
+                <div class="chatbot-message-item received">
+                    <span class="chatbot-message-item-text">
+                        Hello. Hello. Hello. Ciao. Ciao. Ciao. 
+                    </span>
+                    <span class="chatbot-message-item-time">09:17</span>
+                </div>
+            </div>
+            <div class="chatbot-message-bottom">
+                <form action="#" class="chatbot-message-form">
+                    <textarea rows="1" placeholder="Type message..." class="chatbot-message-input"></textarea>
+                    <button type="submit" class="chatbot-message-submit"><i class="bx bx-send"></i></button>
+                </form>
+            </div>
+            <div class="chatbot-message-dropdown">
+                <i class="bx bx-dots-vertical-rounded chatbot-message-dropdown-toggle"></i>
+                <ul class="chatbot-message-dropdown-menu">
+                    <li><a href="#">Search</a></li>
+                    <li><a href="#">Report</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     {% endblock footer %}
 {% endblock content %}
 </body>
