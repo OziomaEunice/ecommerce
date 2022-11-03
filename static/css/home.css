@@ -480,6 +480,7 @@ form button{
     padding: .5rem 0;
     width: 120px;
     box-shadow: .25rem .25rem 1.5rem rgba(0, 0, 0, 0.1);
+    display: none; /*Add this to make the menu not to show*/
     /* transform: scale(0);
     transform-origin: top right;
     transition: .2s; */
