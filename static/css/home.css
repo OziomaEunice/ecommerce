@@ -409,6 +409,7 @@ form button{
     overflow: hidden;
     box-shadow: .5rem .5rem 2rem rgba(0,0,0,1);
     background-color: #fff;
+    display: none; /*Add this to make the message box disappear*/
     /* transform: scale(0);
     transform-origin: bottom right;
     transition: .2s; */

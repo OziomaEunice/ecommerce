@@ -7,6 +7,7 @@
             <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet"> <!--Box icons for chatbox-->
             <link href= "{{ url_for('static', filename='css/home.css') }}" type= "text/css" rel= "stylesheet"> <!--Link to home.css file-->
             <link href= "{{ url_for('static', filename='image/bg1.jpeg') }}" type= "text/css" rel= "stylesheet"> <!--Link to bg1.jpeg image file-->
+            <link href= "{{ url_for('static', filename='js/home.js') }}" type= "text/js" rel= "stylesheet"> <!--This links to the home.js-->
             <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!--For icons-->
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -116,7 +117,7 @@
 
     <!--Chatbot-->
     <div class="chatbot-wrapper">
-        <div class="chatbot-toggle">
+        <div class="chatbot-toggle" onclick="toggleONOFF()">
             <i class="bx bx-message-dots"></i>
         </div>
         <div class="chatbot-message-wrapper">
