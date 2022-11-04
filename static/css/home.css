@@ -405,6 +405,7 @@ form button{
     bottom: calc(100% + 1rem);
     right: 0;
     width: 300px; /*I changed width from 420px to 300px*/
+    height: 320px;
     border-radius: .5rem;
     overflow: hidden;
     box-shadow: .5rem .5rem 2rem rgba(0,0,0,1);
@@ -440,6 +441,11 @@ form button{
     border-radius: 50%;
 }
 
+.chatbot-message-wrapper .chatbot-message-header{
+    background-color: #0082e6;
+    box-shadow: .25rem .25rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
 .chatbot-message-name{
     font-size: 1.125rem;
     font-weight: 600;
@@ -451,7 +457,10 @@ form button{
 }
 
 .chatbot-message-dropdown{
-    position: relative;
+    /* position: relative; */
+    position: absolute;
+    right: 10px;
+    top: 10%;
 }
 
 .chatbot-message-dropdown-toggle{
@@ -516,6 +525,7 @@ form button{
     padding: .1rem;
     box-shadow: .25rem .25rem 1.5rem rgba(0, 0, 0, 0.1);
     border-radius: .5rem;
+    /* background: rgb(46, 46, 170); */
 }
 
 .chatbot-message-item .sent{
@@ -524,6 +534,25 @@ form button{
     color: var(--white);
     border-radius: .5rem 0 .75rem .75rem;
 }
+
+.chatbot-message-wrapper .sent{
+    position: absolute;
+    left: 20px;
+    width: 200px;
+    height: 50px;
+    background-color: #0082e6;
+}/*This is to make the color of the sender blue*/
+
+.chatbot-message-wrapper .received{
+    position: absolute;
+    right: 20px;
+    width: 200px;
+    height: 50px;
+    top: 60%;
+    /* bottom: 20%; */
+    background-color: rgb(233, 224, 224);
+}/*This is to make the color of the receiver grey*/
+
 
 .chatbot-message-item .received{
     background: var(--white);
@@ -570,4 +599,15 @@ form button{
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+.chatbot-message-wrapper .chatbot-message-input{
+    position: absolute;
+    top: 90%;
+}
+
+.chatbot-message-wrapper .chatbot-message-submit{
+    position: absolute;
+    right: 10px;
+    top: 85%;
 }
