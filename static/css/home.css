@@ -405,7 +405,7 @@ form button{
     bottom: calc(100% + 1rem);
     right: 0;
     width: 300px; /*I changed width from 420px to 300px*/
-    height: 320px;
+    height: 400px;
     border-radius: .5rem;
     overflow: hidden;
     box-shadow: .5rem .5rem 2rem rgba(0,0,0,1);
@@ -548,7 +548,7 @@ form button{
     right: 20px;
     width: 200px;
     height: 50px;
-    top: 60%;
+    top: 45%;
     /* bottom: 20%; */
     background-color: rgb(233, 224, 224);
 }/*This is to make the color of the receiver grey*/
@@ -559,6 +559,22 @@ form button{
     border-radius: 0 .75rem .75rem .75rem;
     box-shadow: .25rem .25rem 1.5rem rgba(0, 0, 0, 0.05);
 }
+
+.chatbot-message-item .resent{
+    align-self: flex-end;
+    background: var(--blue);
+    color: var(--white);
+    border-radius: .5rem 0 .75rem .75rem;
+}
+
+.chatbot-message-wrapper .resent{
+    position: absolute;
+    left: 20px;
+    width: 200px;
+    height: 50px;
+    background-color: #0082e6;
+    top: 65%;
+}/*This is to make the color of the sender blue*/
 
 .chatbot-message-item-time{
     float: right;
