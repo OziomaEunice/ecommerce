@@ -18,12 +18,18 @@ def home():
 
 # sell page. 
 # this will open a new tab
+# How this will work is by using {{ url_for('sell') }} in the html files,
+# (in the section of sell), it will link to the html files and open them 
+# on the browser.
 @app.route('/sell/')
 def sell():
     return render_template('sell.html')
 
 # buy page. 
 # this will open a new tab
+# How this will work is by using {{ url_for('buy') }} in the html files,
+# (in the section of buy), it will link to the html files and open them 
+# on the browser.
 @app.route('/buy/')
 def buy():
     return render_template('buy.html')
