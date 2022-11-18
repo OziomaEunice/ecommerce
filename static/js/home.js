@@ -1,10 +1,3 @@
-/**TRY CODING HERE TO MAKE BACKROUND TEXT DISAPPEAR WHEN CLICKING
- * ON THE CHECLIST (3 LINES)
- */
-
-
-
-
 //TOGGLE CHATBOT
 const chatbotToggle = document.getElementsByClassName("chatbot-message-wrapper")
 
