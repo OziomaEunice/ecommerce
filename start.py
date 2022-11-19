@@ -34,5 +34,15 @@ def sell():
 def buy():
     return render_template('buy.html')
 
+
+# register page. 
+# this will open a new tab
+# How this will work is by using {{ url_for('modal') }} in the html files,
+# (in the section of modal), it will link to the html files and open them 
+# on the browser.
+@app.route('/register/')
+def sell():
+    return render_template('modal.html')
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
