@@ -24,26 +24,29 @@
         
         <!--Create a nav bar section-->
         {% block navbar %}
-        <nav>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fas fa-bars"></i>
-            </label>
-            <label class="logo">E-commerce</label> <!--Sort of header (or logo) in the navbar-->
-            <ul> <!--This are sections in the navbar-->
-                <li><a class="active" href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#cart">Cart</a></li>
-                <li><a href="{{ url_for('register') }}" target="_blank" onclick="openPopup()"><button type="submit" class="btn" onclick="openPopup()">Sign Up | Login</button></a></li>
-            </ul>
-        </nav>
-        {% endblock navbar %}
-
-        {% block text_box %}
-        <div class="text-box slide-left">
-            <h1>Welcome</h1>
-            <p>Sell. Save. Spend</p>
+        <div class="container">
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <label class="logo">E-commerce</label> <!--Sort of header (or logo) in the navbar-->
+                <ul> <!--This are sections in the navbar-->
+                    <li><a class="active" href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#cart">Cart</a></li>
+                    <li><a href="{{ url_for('register') }}" target="_blank" onclick="openPopup()"><button type="submit" class="btn" onclick="openPopup()">Sign Up | Login</button></a></li>
+                </ul>
+            </nav>
+            {% endblock navbar %}
+    
+            {% block text_box %}
+            <div class="text-box slide-left">
+                <h1>Welcome</h1>
+                <p>Sell. Save. Spend</p>
+            </div>
         </div>
+        
         {% endblock text_box %}
 
         <!--A new section-->
@@ -164,7 +167,7 @@
     </div>
     <script src="/static/js/home.js"></script>
     <script src="/static/js/register.js"></script>
-    
+
     {% endblock footer %}
 {% endblock content %}
 </body>
