@@ -41,7 +41,7 @@ def buy():
 # (in the section of modal), it will link to the html files and open them 
 # on the browser.
 @app.route('/register/')
-def register():
+def modal():
     return render_template('modal.html')
 
 if __name__ == "__main__":
