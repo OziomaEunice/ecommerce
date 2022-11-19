@@ -196,6 +196,7 @@ section{
     justify-content: space-between;
     opacity: 0; /*I added this for it not to show in few seconds, for 
     animation purposes.*/
+    background-color: #333;
 }
 
 .container2 .box{
