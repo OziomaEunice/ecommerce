@@ -38,8 +38,8 @@ def buy():
 # register page. 
 # this will open a new tab
 # How this will work is by using {{ url_for('modal') }} in the html files,
-# (in the section of modal), it will link to the html files and open them 
-# on the browser.
+# (in the section of modal), it will link to the html files and open them on the browser.
+## N.B.: both register and modal files are (registery files, i.e. they are for sign up/login)
 @app.route('/register/')
 def register():
     return render_template('modal.html')
