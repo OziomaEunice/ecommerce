@@ -14,29 +14,34 @@
     of the page-->
 </head>
 <body>
-    <div class="popup-screen">
-        <div class="popup-box">
-            <img src="/static/image/icons-ecommerce.png">
-            <i class="fas fa-times close-btn"></i>
-            <h2>Register to get started today</h2>
-            <p>
-                Create an account using any 
-                of these platforms. <br> Register with Email &#9993;
-            </p>
-            <!-- <a href="#" class="btn">Register -->
-                <a href="#" class="btn field facebook">
-                    <i class="bx bxl-facebook facebook-icon"></i>
-                    <span>Sign Up with Facebook</span>
-                </a>
-                <a href="#" class="btn field google">
-                    <i class='bx bxl-google google-icon'></i>
-                    <span>Sign Up with Google</span>
-                </a>
-                <a href="#" class="btn field apple">
-                    <i class='bx bxl-apple apple-icon'></i>
-                    <span>Sign Up with Apple</span>
-                </a>
-            <!-- </a> -->
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Sign Up</h1>
+            <form>
+                <div class="input-group">
+                    <div class="input-field" id="nameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Name">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+
+                    <p>Forgot password? <a href="#">Click Here</a></p>
+                </div>
+
+                <div class="btn-field">
+                    <button type="button" id="signupBtn">Sign up</button>
+                    <button type="button" id="loginBtn" class="disable">Login</button>
+                </div>
+            </form>
         </div>
     </div>
 

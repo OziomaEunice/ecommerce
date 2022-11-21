@@ -1,27 +1,24 @@
-const popupScreen = document.querySelector("popup-screen");
-const popupBox = document.querySelector("popup-box");
-const closeBtn = document.querySelector("close-btn");
-
-window.addEventListener("load", () => {
-    setTimeout(() => {
-        popupScreen.classList.add("active");
-    }, 2000); //Popup the screen in 2 seconds after the page is loaded.
-});
+//Define the variables
+let signupBtn = document.getElementById("signupBtn")
+let loginBtn = document.getElementById("loginBtn")
+let nameField = document.getElementById("nameField")
+let title = document.getElementById("title")
 
 
-closeBtn.addEventListener("click", () => {
-    popupScreen.classList.remove("active"); //Close the popup screen on click the close button.
-    
-    //Create a cookie for a dat (to expire within a day) on click the close button.
-    document.cookie = "WebsiteName=testWebsite; max-age=" + 24 * 60 *60; //1 day = 24 hours = 24*60*60
-});
-
-//Use the created cookie to hide or show the popup screen.
-const WebsiteCookie = document.cookie.indexOf("WebsiteName=");
-
-if(WebsiteCookie != -1){
-    popupScreen.style.display = "none"; //Hide the popup screen if the cookie is not expired.
+//Create a function that will allow the user to
+//click on the sign in or sign up button
+//and whichever button is clicked, it will show
+//the title as "Sign Up" or "Sign In"
+loginBtn.onclick = function(){
+    nameField.style.maxHeight = "0";
+    title.innerHTML = "Login"; //When the signin button is clicked, the title will change to "Sign In"
+    signupBtn.classList.add("disable") //Sign Up button will change color to grey
+    loginBtn.classList.remove("disable") //Sign In button will change color to blue
 }
-else{
-    popupScreen.style.display = "flex"; //Show the popup screen if the cookie is expired.
+
+signupBtn.onclick = function(){
+    nameField.style.maxHeight = "60px";
+    title.innerHTML = "Sign Up"; //When the signup button is clicked, the title will change to "Sign Up"
+    signupBtn.classList.remove("disable") //Sign Up button will change color to blue
+    loginBtn.classList.add("disable") //Sign In button will change color to grey
 }
