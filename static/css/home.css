@@ -105,6 +105,11 @@ a.active, a:hover{
         font-size: 20px;
     }
 
+    nav ul li a .btn{
+        border: none;
+        background: none;
+    }/*This will remove the blue background around the "sign up | login" button*/
+
     a:hover, a.active{
         background: none;
         color: #0082e6;
