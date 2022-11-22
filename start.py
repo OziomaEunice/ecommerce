@@ -43,19 +43,19 @@ def buy():
 @app.route('/register')
 def register():
     return render_template('modal.html')
-database = {'example@com':'123456'} #Database that has the information that the user will need to type in
+# database = {'example@com':'123456'} #Database that has the information that the user will need to type in
 
-@app.route('/login', methods=['POST','GET'])
-def login():
-    userEmail = request.form['Email']
-    userPwd = request.form['Password']
-    if userEmail not in database:
-        return render_template('modal.html', info = 'Invalid User')
-    else:
-        if database[userEmail]!=userPwd:
-            return render_template('modal.html', info = 'Invalid Password')
-        else:
-            return render_template('home.html') #or try ('home.html', placeholder = Email)
+# @app.route('/login', methods=['POST','GET'])
+# def login():
+#     userEmail = request.form['Email']
+#     userPwd = request.form['Password']
+#     if userEmail not in database:
+#         return render_template('modal.html', info = 'Invalid User')
+#     else:
+#         if database[userEmail]!=userPwd:
+#             return render_template('modal.html', info = 'Invalid Password')
+#         else:
+#             return render_template('home.html') #or try ('home.html', placeholder = Email)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
