@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--From
+            https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_navbar_icon-->
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"> <!--For social media icons-->
+            <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet"> <!--Box icons for chatbox-->
+            <link href= "{{ url_for('static', filename='css/home.css') }}" type= "text/css" rel= "stylesheet"> <!--Link to home.css file-->
+            <link href= "{{ url_for('static', filename='css/register.css') }}" type= "text/css" rel= "stylesheet"> <!--Link to register.css file-->
+            <link href= "{{ url_for('static', filename='image/bg1.jpeg') }}" type= "text/css" rel= "stylesheet"> <!--Link to bg1.jpeg image file-->
+            <link href= "{{ url_for('static', filename='js/home.js') }}" type= "text/js" rel= "stylesheet"> <!--This links to the home.js-->
+            <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!--For icons-->
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>E-Commerce | Home </title>
+            <link rel="icon" href="/static/image/icons-ecommerce.png" type="image/x-icon"> <!--add icon link. This icon will show next to Title 
+            of the page-->
+    </head>
+    <body style="background-color: #d4dadc;">
+        {% block content %}
+        <!--Start-->
+        
+        <!--Create a nav bar section-->
+        {% block navbar %}
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">E-commerce</label> <!--Sort of header (or logo) in the navbar-->
+            <ul> <!--This are sections in the navbar-->
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#cart">Cart</a></li>
+                <li><a href="{{ url_for('home') }}"><button type="submit" class="btn">Log out</button></a></li>
+            </ul>
+        </nav>
+        {% endblock navbar %}
+
+        {% block text_box %}
+        <div class="text-box slide-left">
+            <h1>Welcome</h1>
+            <p>Sell. Save. Spend</p>
+        </div>
+        {% endblock text_box %}
+
+        <!--A new section-->
+    <!--Background image-->
+    <section> 
+    </section>
+
+    <!--Boxes for seller & buyer-->
+    {% block container2 %}
+    <div class="container2 slide-left">
+        <div class="box">
+            <div class="icon">SELL</div>
+            <div class="content">
+                <h3>Seller</h3>
+                <p>
+                    Want to sell your items?<br>
+                    Register today to upload and sell items you
+                    want your buyers to buy from and get connected
+                    with them!
+                </p>
+                <a href="{{ url_for('sell') }}" target="_blank" rel="noopener noreferrer">Continue &#10230</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon">BUY</div>
+            <div class="content">
+                <h3>Buyer</h3>
+                <p>
+                    Looking for what to buy? <br>
+                    Worry no more. Check out some cool items
+                    that will be of interest to you.
+                </p>
+                <a href="{{ url_for('buy') }}" target="_blank" rel="noopener noreferrer">Continue &#10230</a>
+            </div>
+        </div>
+    </div>
+    {% endblock container2 %}
+
+    <!--Some design to do in this section (TO BE CONTINUED)-->
+
+
+    <!--Foot header section-->
+    {% block footer %}
+    <div class="footer">
+        <div class="col-1">
+            <h3>USEFUL LINKS</h3>
+            <a href="#about">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <a href="#">Explore</a>
+            <a href="#">Blog</a>
+        </div>
+        <div class="col-2">
+            <h3>NEWSLETTER</h3>
+            <form>
+                <input type="email" placeholder="Your Email Address" required>
+                <br>
+                <button type="submit">SUBSCRIBE</button>
+            </form>
+            <p><sub><i><a href="https://github.com/OziomaEunice" target="_blank" rel="noopener noreferrer">© Designed by Ozioma E. Onwubiko</a></i></sub></p>
+        </div>
+        <div class="col-3">
+            <h3>CONTACT</h3>
+            <p>10 Colinton Rd,<br> Edinburgh, EH10 5DT</p>
+            <div class="social-icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+        </div>
+    </div>
+
+    <!--Chatbot-->
+    <div class="chatbot-wrapper">
+        <div class="chatbot-toggle" onclick="toggleONOFF()">
+            <i class="bx bx-message-dots"></i>
+        </div>
+        <div class="chatbot-message-wrapper">
+            <div class="chatbot-message-header">
+                <div class="chatbot-message-profile">
+                    <img src="/static/image/profile-teddy-smile.jpg" alt="" class="chatbot-message-image">
+                </div>
+                <div>
+                    <h4 class="chatbot-message-name">ChatBot</h4>
+                    <p class="chatbot-message-status">online</p>
+                </div>
+            </div>
+            <div class="chatbot-message-content">
+                <!-- <h4 class="chatbot-message-no-message">No message sent yet. Start a conversation.</h4> -->
+                <div class="chatbot-message-item sent">
+                    <span class="chatbot-message-item-text">Hi, welcome. How can I help?</span>
+                    <span class="chatbot-message-item-time">09:17</span>
+                </div>
+                <div class="chatbot-message-item received">
+                    <span class="chatbot-message-item-text">Hi, I'm not able to order and item online</span>
+                    <span class="chatbot-message-item-time">09:19</span>
+                </div>
+                <div class="chatbot-message-item resent">
+                    <span class="chatbot-message-item-text">Alright, what is the item you are looking for?</span>
+                    <span class="chatbot-message-item-time">09:20</span>
+                </div>
+            </div>
+            <div class="chatbot-message-bottom">
+                <form action="#" class="chatbot-message-form">
+                    <textarea rows="1" placeholder="Type message..." class="chatbot-message-input"></textarea>
+                    <button type="submit" class="chatbot-message-submit"><i class="bx bx-send"></i></button>
+                </form>
+            </div>
+            <div class="chatbot-message-dropdown">
+                <i class="bx bx-dots-vertical-rounded chatbot-message-dropdown-toggle"></i>
+                <ul class="chatbot-message-dropdown-menu">
+                    <li><a href="#">Search</a></li>
+                    <li><a href="#">Report</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/home.js"></script>
+    {% endblock footer %}
+{% endblock content %}
+</body>
+</html>
