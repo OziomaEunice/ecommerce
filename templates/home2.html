@@ -33,8 +33,43 @@
                 <li><a class="active" href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#cart">Cart</a></li>
-                <li><a href="{{ url_for('home') }}"><button type="submit" class="btn">Log out</button></a></li>
+                <li><img src="/static/image/cat.jpg" class="user-pic" onclick="openMenu()"></li>
             </ul>
+
+             <!--Profile-->
+             <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="/static/image/cat.jpg">
+                        <h3>YourName</h3>
+                    </div>
+                    <hr>
+
+                    <a href="#" class="sub-menu-link">
+                        <i class='bx bxs-user'></i>
+                        <p>Edit Profile</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="#" class="sub-menu-link">
+                        <i class='bx bxs-cog'></i>
+                        <p>Settings & Privacy</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="#" class="sub-menu-link">
+                        <i class='bx bxs-help-circle'></i>
+                        <p>Help</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="{{ url_for('home') }}" class="sub-menu-link">
+                        <i class='bx bx-log-out-circle'></i>
+                        <p>Log out</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
         </nav>
         {% endblock navbar %}
 
@@ -162,6 +197,7 @@
         </div>
     </div>
     <script src="/static/js/home.js"></script>
+    <script src="/static/js/home2.js"></script>
     {% endblock footer %}
 {% endblock content %}
 </body>
