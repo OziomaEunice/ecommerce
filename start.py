@@ -16,7 +16,7 @@ def home():
     return render_template('home.html')
 
 # home page when user is logged in
-@app.route('/logged-in/home/')
+@app.route('/logged-in-home/')
 def home_log():
     return render_template('home2.html')
 
