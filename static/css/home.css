@@ -16,7 +16,7 @@ body{
 
 /*Layout of the navbar*/
 nav{
-    background: #0082e6;
+    background: #054678;
     height: 80px;
     width: 100%;
 }
@@ -47,6 +47,11 @@ nav ul li a{
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
+}
+
+nav ul li a .btn{
+    border: none;
+    background: none;
 }
 
 a.active, a:hover{
