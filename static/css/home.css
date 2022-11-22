@@ -134,6 +134,10 @@ a.active, a:hover{
     margin: 12px 0;
 }
 
+.sub-menu-link:hover{
+    background-color: transparent;
+    text-decoration: none;
+}/*removes a background color that was there*/
 
 .sub-menu-link p{
     width: 100%;
