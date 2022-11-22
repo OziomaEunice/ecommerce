@@ -40,9 +40,22 @@ def buy():
 # How this will work is by using {{ url_for('modal') }} in the html files,
 # (in the section of modal), it will link to the html files and open them on the browser.
 ## N.B.: both register and modal files are (registery files, i.e. they are for sign up/login)
-@app.route('/register/')
+@app.route('/register')
 def register():
     return render_template('modal.html')
+database = {'example@com':'123456'} #Database that has the information that the user will need to type in
+
+@app.route('/login', methods=['POST','GET'])
+def login():
+    userEmail = request.form['Email']
+    userPwd = request.form['Password']
+    if userEmail not in database:
+        return render_template('modal.html', info = 'Invalid User')
+    else:
+        if database[userEmail]!=userPwd:
+            return render_template('modal.html', info = 'Invalid Password')
+        else:
+            return render_template('home.html') #or try ('home.html', placeholder = Email)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
