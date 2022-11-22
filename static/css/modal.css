@@ -96,6 +96,11 @@ form p a{
     transition: background 1s;
 }
 
+.btn-field button a{
+    text-decoration: none;
+    color: #fff;
+}
+
 .input-group{
     height: 280px;
 }
