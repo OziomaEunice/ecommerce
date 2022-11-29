@@ -136,3 +136,45 @@ section p{
         transition: none;
     }
 }
+
+
+/*Section 4*/
+.btn-field{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.btn-field button{
+    flex-basis: 48%;
+    background: #8c949a;
+    color: #fff;
+    height: 60px;
+    border-radius: 40px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+    font-size: 20px;
+}
+
+.btn-field button a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.input-group{
+    height: 280px;
+}
+
+.btn-field button.disable{
+    background-color: #eaeaea;
+    color: #555;
+}
+
+.btn-field button a.disable{
+    background-color: #eaeaea;
+    color: #555;
+}
