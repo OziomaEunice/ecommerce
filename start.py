@@ -20,6 +20,10 @@ def home():
 def home_log():
     return render_template('home2.html')
 
+# profile page
+@app.route('/profile/')
+def profile():
+    return render_template('profile.html')
 
 # sell page. 
 # this will open a new tab
