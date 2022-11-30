@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--From
+            https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_navbar_icon-->
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"> <!--For social media icons-->
+            <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet"> <!--Box icons for chatbox-->
+            <link href= "{{ url_for('static', filename='css/checkout.css') }}" type= "text/css" rel= "stylesheet"> <!--Link to checkout.css file-->
+            <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!--For icons-->
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>E-Commerce | Checkout </title>
+            <link rel="icon" href="/static/image/icons-ecommerce.png" type="image/x-icon"> <!--add icon link. This icon will show next to Title 
+            of the page-->
+    </head>
+<body>
+
+    {% block content %}
+
+    {% block preloader %}
+    <div id="preloader"></div> <!--Preloader for the page-->
+    {% endblock preloader %}
+
+
+      <!--Credit to https://www.youtube.com/watch?v=-gEV3znqu8E&ab_channel=codewithsadee for code-->
+      <!--Main container-->
+      <main class="container">
+        <h1 class="heading">
+            <ion-icon name="cart-outline"></ion-icon>
+            Shopping Cart
+        </h1>
+
+        <div class="item-flex">
+            <!--checkout section-->
+            <section class="checkout">
+                <h2 class="section-heading">Payment Details</h2>
+                <div class="payment-form">
+                    <div class="payment-method">
+                        <button class="method selected">
+                            <ion-icon name="card"></ion-icon>
+                            <span>Credit Card</span>
+                            <ion-icon class="checkmark fill" name="checkmark-circle"></ion-icon>
+                        </button>
+
+                        <button class="method">
+                            <ion-icon name="logo-paypal"></ion-icon>
+                            <span>PayPal</span>
+                            <ion-icon class="checkmark fill" name="checkmark-circle-outline"></ion-icon>
+                        </button>
+                    </div>
+
+                    <form action="#">
+                        <div class="cardholder-name">
+                            <label for="cardholder-name" class="label-default">Cardholder name</label>
+                            <input type="text" name="cardholder-name" id="cardholder-name" class="input-default">
+                        </div>
+
+                        <div class="card-number">
+                            <label for="card-number" class="label-default">Card Number</label>
+                            <input type="number" name="card-number" id="card-number" class="input-default">
+                        </div>
+
+                        <div class="input-flex">
+                            <div class="expire-date">
+                                <label for="expire-date" class="label-default">Expiration date</label>
+
+                                <div class="input-flex">
+                                    <input type="number" name="day" id="expire-date" 
+                                    placeholder="31" min="1" max="31" class="input-default">
+                                    /
+                                    <input type="number" name="month" id="expire-date" 
+                                    placeholder="12" min="1" max="12" class="input-default">
+                                </div>
+                            </div>
+
+                            <div class="CVV">
+                                <label for="cvv" class="label-default">CVV</label>
+                                <input type="number" name="cvv" id="cvv" class="input-default">
+                            </div>
+
+                        </div>
+                    </form>
+
+                </div>
+
+                <button class="btn btn-primary">
+                    <span id="payAmount"><b>Pay</b>£2.15</span>
+                </button>
+
+            </section>
+
+            <!--cart section-->
+            <section class="cart">
+                <div class="cart-item-box">
+                    <h2 class="section-heading">Order Summary</h2>
+
+                    <div class="product-card">
+                        <div class="card">
+                            <div class="img-box">
+                                <img src="/static/image/nike-air-shoe.jpg" alt="Nike Air" width="80px" class="product-img">
+                            </div>
+
+                            <div class="detail">
+                                <h4 class="product-name">Nike Air force 1</h4>
+
+                                <div class="wrapper">
+                                    <div class="product-qty">
+                                        <button id="decrement">
+                                            <ion-icon name="remove-outline"></ion-icon>
+                                        </button>
+
+                                        <span id="quantity">1</span>
+
+                                        <button id="increment">
+                                            <ion-icon name="add-outline"></ion-icon>
+                                        </button>
+                                    </div>
+
+                                    <div class="price">
+                                        <span id="price">£70.00</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="product-close-btn">
+                                <ion-icon name="close-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="card">
+                            <div class="img-box">
+                                <img src="/static/image/ipad.jpg" alt="iPad" width="80px" class="product-img">
+                            </div>
+
+                            <div class="detail">
+                                <h4 class="product-name">iPad (refurbished)</h4>
+
+                                <div class="wrapper">
+                                    <div class="product-qty">
+                                        <button id="decrement">
+                                            <ion-icon name="remove-outline"></ion-icon>
+                                        </button>
+
+                                        <span id="quantity">1</span>
+
+                                        <button id="increment">
+                                            <ion-icon name="add-outline"></ion-icon>
+                                        </button>
+                                    </div>
+
+                                    <div class="price">
+                                        <span id="price">£100.00</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="product-close-btn">
+                                <ion-icon name="close-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="wrapper">
+                    <div class="discount-token">
+                        <label for="discount-token" class="label-default">
+                            Gift card/Discount code
+                        </label>
+
+                        <div class="wrapper-flex">
+                            <input type="text" name="discount-token" id="discount-token" class="input-default">
+                            <button class="btn btn-outline">Apply</button>
+                        </div>
+
+                    </div>
+
+                    <div class="amount">
+                        <div class="subtotal">
+                            <span>Subtotal</span><span id="subtotal">£170.00</span>
+                        </div>
+
+                        <div class="tax">
+                            <span>Tax</span><span id="tax">£0.10</span>
+                        </div>
+
+                        <div class="shipping">
+                            <span>Shipping</span><span id="shipping">£0.00</span>
+                        </div>
+
+                        <div class="total">
+                            <span>Total</span><span id="total">£170.00</span>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!--This section is here for the purpose of the preloader to last some seconds longer.
+                The reason is because it quickly disappears so it needs to last for some seconds before disappearing.-->
+                <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/0e0v6waXCPI" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+               </iframe>
+        </div>
+      </main>
+
+
+    <script src="/static/js/checkout.js"></script>
+
+    <!--ionicon link-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+{% endblock content %}
+</body>
+</html>

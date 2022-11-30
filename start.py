@@ -30,6 +30,11 @@ def profile():
 def shop():
     return render_template('shop.html')
 
+# checkout page
+@app.route('/shop/checkout')
+def checkout():
+    return render_template('checkout.html')
+
 # sell page. 
 # this will open a new tab
 # How this will work is by using {{ url_for('sell') }} in the html files,
