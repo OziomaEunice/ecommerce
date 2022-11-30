@@ -25,6 +25,11 @@ def home_log():
 def profile():
     return render_template('profile.html')
 
+# shopping page
+@app.route('/shop/')
+def shop():
+    return render_template('shop.html')
+
 # sell page. 
 # this will open a new tab
 # How this will work is by using {{ url_for('sell') }} in the html files,

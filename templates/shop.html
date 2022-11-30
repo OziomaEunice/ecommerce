@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--From
+            https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_navbar_icon-->
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"> <!--For social media icons-->
+            <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet"> <!--Box icons for chatbox-->
+            <link href="shop.css" rel="stylesheet"> <!--This links to the shop.css-->
+            <link href= "{{ url_for('static', filename='css/shop.css') }}" type= "text/css" rel= "stylesheet"> <!--Link to shop.css file-->
+            <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!--For icons-->
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>E-Commerce | SHOP </title>
+            <link rel="icon" href="/static/image/icons-ecommerce.png" type="image/x-icon"> <!--add icon link. This icon will show next to Title 
+            of the page-->
+    </head>
+<body>
+      
+    <!--Credit to https://www.youtube.com/watch?v=2x7Gwr4V47w&ab_channel=sakaos for code-->
+    <div>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">E-commerce</label> <!--Sort of header (or logo) in the navbar-->
+            <ul> <!--This are sections in the navbar-->
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a class="active" href="#shop">Shop</a></li>
+                <li><img src="/static/image/cat.jpg" class="user-pic" onclick="openMenu()"></li>
+            </ul>
+           
+            <!--Profile-->
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="/static/image/cat.jpg">
+                        <h3>YourName</h3>
+                    </div>
+                    <hr>
+
+                    <a href="{{ url_for('profile') }}" class="sub-menu-link">
+                        <i class='bx bxs-user'></i>
+                        <p>Edit Profile</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="#" class="sub-menu-link">
+                        <i class='bx bxs-cog'></i>
+                        <p>Settings & Privacy</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="#" class="sub-menu-link">
+                        <i class='bx bxs-help-circle'></i>
+                        <p>Help</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="{{ url_for('home') }}" class="sub-menu-link">
+                        <i class='bx bx-log-out-circle'></i>
+                        <p>Log out</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+    <div>
+        <h2 style="font-size: 40px; color:rgb(8, 6, 66); margin-top:30px; margin-left:30px;">SHOP BY CATEGORY</h2>
+    </div>
+    <h1><i class="fa fa-shopping-cart"></i></h1>
+
+    <!--SECTION 1: CLOTHES-->
+    <h4 style="font-size: 20px; color:rgb(8, 6, 66); margin-top:30px; margin-left:30px;">CLOTHES</h4>
+    <section>
+        <div>
+            <img src="/static/image/nike-air-shoe.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eius fugit sequi ipsam, natus consectetur aperiam pariatur 
+                unde suscipit reiciendis debitis rerum earum aut quisquam, 
+                tenetur quasi dignissimos! Quis, suscipit eveniet?
+            </p>
+            <h6>£90</h6>
+            <span></span>
+            <button>Add-cart</button>
+            <button><a href="" style="text-decoration: none; color:white;">View Item</a></button>
+        </div>
+        <div>
+            <img src="/static/image/nike-red-shoe.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eius fugit sequi ipsam, natus consectetur aperiam pariatur 
+                unde suscipit reiciendis debitis rerum earum aut quisquam, 
+                tenetur quasi dignissimos! Quis, suscipit eveniet?
+            </p>
+            <h6>£95</h6>
+            <span></span>
+            <button>Add-cart</button>
+            <button><a href="" style="text-decoration: none; color:white;">View Item</a></button>
+        </div>
+        <div>
+            <img src="/static/image/adidas-shoe.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eius fugit sequi ipsam, natus consectetur aperiam pariatur 
+                unde suscipit reiciendis debitis rerum earum aut quisquam, 
+                tenetur quasi dignissimos! Quis, suscipit eveniet?
+            </p>
+            <h6>£70</h6>
+            <span></span>
+            <button>Add-cart</button>
+            <button><a href="" style="text-decoration: none; color:white;">View Item</a></button>
+        </div>
+        <div>
+            <img src="/static/image/red-dress.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eius fugit sequi ipsam, natus consectetur aperiam pariatur 
+                unde suscipit reiciendis debitis rerum earum aut quisquam, 
+                tenetur quasi dignissimos! Quis, suscipit eveniet?
+            </p>
+            <h6>£10</h6>
+            <span></span>
+            <button>Add-cart</button>
+            <button><a href="" style="text-decoration: none; color:white;">View Item</a></button>
+        </div>
+    </section>
+
+
+    <!--SECTION 2: TECHNOLOGY-->
+    <h4 style="font-size: 20px; color:rgb(8, 6, 66); margin-top:30px; margin-left:30px;">TECHNOLOGY</h4>
+    <section>
+        <div>
+            <img src="/static/image/iphone.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eius fugit sequi ipsam, natus consectetur aperiam pariatur 
+                unde suscipit reiciendis debitis rerum earum aut quisquam, 
+                tenetur quasi dignissimos! Quis, suscipit eveniet?
+            </p>
+            <h6>£90</h6>
+            <span></span>
+            <button>Add-cart</button>
+            <button><a href="" style="text-decoration: none; color:white;">View Item</a></button>
+        </div>
+        <div>
+            <img src="/static/image/ipad.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eius fugit sequi ipsam, natus consectetur aperiam pariatur 
+                unde suscipit reiciendis debitis rerum earum aut quisquam, 
+                tenetur quasi dignissimos! Quis, suscipit eveniet?
+            </p>
+            <h6>£95</h6>
+            <span></span>
+            <button>Add-cart</button>
+            <button><a href="" style="text-decoration: none; color:white;">View Item</a></button>
+        </div>
+        <div>
+            <img src="/static/image/macbook-1.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eius fugit sequi ipsam, natus consectetur aperiam pariatur 
+                unde suscipit reiciendis debitis rerum earum aut quisquam, 
+                tenetur quasi dignissimos! Quis, suscipit eveniet?
+            </p>
+            <h6>£70</h6>
+            <span></span>
+            <button>Add-cart</button>
+            <button><a href="" style="text-decoration: none; color:white;">View Item</a></button>
+        </div>
+        <div>
+            <img src="/static/image/macbook-2.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eius fugit sequi ipsam, natus consectetur aperiam pariatur 
+                unde suscipit reiciendis debitis rerum earum aut quisquam, 
+                tenetur quasi dignissimos! Quis, suscipit eveniet?
+            </p>
+            <h6>£10</h6>
+            <span></span>
+            <button>Add-cart</button>
+            <button><a href="" style="text-decoration: none; color:white;">View Item</a></button>
+        </div>
+    </section>
+
+
+    <!--SECTION 3: BOOKS-->
+    <h4 style="font-size: 20px; color:rgb(8, 6, 66); margin-top:30px; margin-left:30px;">BOOKS</h4>
+    <section>
+        <div>
+            <img src="/static/image/book-1.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eius fugit sequi ipsam, natus consectetur aperiam pariatur 
+                unde suscipit reiciendis debitis rerum earum aut quisquam, 
+                tenetur quasi dignissimos! Quis, suscipit eveniet?
+            </p>
+            <h6>£90</h6>
+            <span></span>
+            <button>Add-cart</button>
+            <button><a href="" style="text-decoration: none; color:white;">View Item</a></button>
+        </div>
+        <div>
+            <img src="/static/image/book-2.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eius fugit sequi ipsam, natus consectetur aperiam pariatur 
+                unde suscipit reiciendis debitis rerum earum aut quisquam, 
+                tenetur quasi dignissimos! Quis, suscipit eveniet?
+            </p>
+            <h6>£95</h6>
+            <span></span>
+            <button>Add-cart</button>
+            <button><a href="" style="text-decoration: none; color:white;">View Item</a></button>
+        </div>
+        <div>
+            <img src="/static/image/book-3.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eius fugit sequi ipsam, natus consectetur aperiam pariatur 
+                unde suscipit reiciendis debitis rerum earum aut quisquam, 
+                tenetur quasi dignissimos! Quis, suscipit eveniet?
+            </p>
+            <h6>£70</h6>
+            <span></span>
+            <button>Add-cart</button>
+            <button><a href="" style="text-decoration: none; color:white;">View Item</a></button>
+        </div>
+        <div>
+            <img src="/static/image/book-4.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eius fugit sequi ipsam, natus consectetur aperiam pariatur 
+                unde suscipit reiciendis debitis rerum earum aut quisquam, 
+                tenetur quasi dignissimos! Quis, suscipit eveniet?
+            </p>
+            <h6>£10</h6>
+            <span></span>
+            <button>Add-cart</button>
+            <button><a href="" style="text-decoration: none; color:white;">View Item</a></button>
+        </div>
+    </section>
+
+
+    <div class="select"></div>
+
+    
+    <script src="/static/js/shop.js"></script>
+</body>
+</html>
