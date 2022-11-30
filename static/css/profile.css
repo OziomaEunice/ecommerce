@@ -15,6 +15,22 @@
     font-family: "Poppins", sans-serif;
 }
 
+/*Preloader*/
+#preloader{
+    background: #000 url(preloader_circle.gif) no-repeat center;
+    background-size: 20%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+iframe{
+    display: none;
+}/*What this will do is that it will hide the YT video showing on the page, but
+    the loader will still work*/
+
+
 .sidebar{
     width: 345px;
     position: fixed;

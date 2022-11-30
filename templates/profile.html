@@ -17,9 +17,14 @@
     </head>
     <body>
         <!--This is the profile page of the customer-->
+        {% block content %}
+
+        {% block preloader %}
+        <div id="preloader"></div> <!--Preloader for the page-->
+        {% endblock preloader %}
+
 
         <!--Credit to https://www.youtube.com/watch?v=OJEQaVT45XA&ab_channel=CodeResource for code-->
-
         <!--Sidebar-->
         <input type="checkbox" id="nav-toggle">
         <div class="sidebar">
@@ -235,10 +240,25 @@
                             </div>
                         </div>
                     </div>
-
+                    <!--This section is here for the purpose of the preloader to last some seconds longer.
+                    The reason is because it quickly disappears so it needs to last for some seconds before disappearing.-->
+                    <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/0e0v6waXCPI" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                    </iframe>
+                    <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/0e0v6waXCPI" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                    </iframe>
                 </div>
             </main>
         </div>
 
+        <script src="/static/js/profile.js"></script>
+{% endblock content %}
     </body>
 </html>
