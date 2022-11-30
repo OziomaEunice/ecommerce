@@ -40,6 +40,7 @@ iframe{
     background: var(--main-color);
     z-index: 100;
     transition: width 300ms;
+    z-index: -1;/*for preloader*/
 }
 
 .sidebar-brand{
