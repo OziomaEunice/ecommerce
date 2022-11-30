@@ -5,7 +5,7 @@
             https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_navbar_icon-->
             <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"> <!--For social media icons-->
             <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet"> <!--Box icons for chatbox-->
-            <link href= "{{ url_for('static', filename='css/home.css') }}" type= "text/css" rel= "stylesheet"> <!--Link to home.css file-->
+            <link href= "{{ url_for('static', filename='css/home2.css') }}" type= "text/css" rel= "stylesheet"> <!--Link to home2.css file-->
             <link href= "{{ url_for('static', filename='css/register.css') }}" type= "text/css" rel= "stylesheet"> <!--Link to register.css file-->
             <link href= "{{ url_for('static', filename='image/bg1.jpeg') }}" type= "text/css" rel= "stylesheet"> <!--Link to bg1.jpeg image file-->
             <link href= "{{ url_for('static', filename='js/home.js') }}" type= "text/js" rel= "stylesheet"> <!--This links to the home.js-->
@@ -21,6 +21,10 @@
         {% block content %}
         <!--Start-->
         
+        {% block preloader %}
+        <div id="preloader"></div> <!--Preloader for the page-->
+        {% endblock preloader %}
+
         <!--Create a nav bar section-->
         {% block navbar %}
         <nav>
@@ -195,6 +199,20 @@
                 </ul>
             </div>
         </div>
+        <!--This section is here for the purpose of the preloader to last some seconds longer.
+                The reason is because it quickly disappears so it needs to last for some seconds before disappearing.-->
+                <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/0e0v6waXCPI" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+               </iframe>
+               <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/0e0v6waXCPI" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+               </iframe>
     </div>
     <script src="/static/js/home.js"></script>
     <script src="/static/js/home2.js"></script>
