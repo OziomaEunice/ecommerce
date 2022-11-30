@@ -18,12 +18,13 @@
     <body>
         <!--This is the profile page of the customer-->
 
+        <!--Credit to https://www.youtube.com/watch?v=OJEQaVT45XA&ab_channel=CodeResource for code-->
 
         <!--Sidebar-->
         <input type="checkbox" id="nav-toggle">
         <div class="sidebar">
             <div class="sidebar-brand">
-                <h2><span class="lab la-accusoft"></span><span>Accusoft</span></h2>
+                <h2><img src="icons-ecommerce.png"><span> </span><span>E-commerce</span></h2>
             </div>
 
             <div class="sidebar-menu">
@@ -43,7 +44,7 @@
                     <li>
                         <a href="">
                             <span class="las la-clipboard-list"></span>
-                            <span>Projects</span>
+                            <span>Items</span>
                         </a>
                     </li>
                     <li>
@@ -64,12 +65,6 @@
                             <span>Accounts</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="">
-                            <span class="las la-clipboard-list"></span>
-                            <span>Tasks</span>
-                        </a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -82,19 +77,19 @@
                         <span class="las la-bars"></span>
                     </label>
 
-                    Dashboard
+                    PROFILE
                 </h2>
                 
                 <div class="search-wrapper">
                     <span class="las la-search"></span>
-                    <input type="search" placeholder="Search here"/>
+                    <input type="search" placeholder="Search"/>
                 </div>
 
                 <div class="user-wrapper">
-                    <img src="/static/image/cat.jpg" width="40px" height="40px" alt="">
+                    <img src="cat.jpg" width="40px" height="40px" alt="">
                     <div>
                         <h4>YourName</h4>
-                        <small>Super admin</small>
+                        <small>Mode: Seller</small>
                     </div>
                 </div>
             </header>
@@ -103,8 +98,8 @@
                 <div class="cards">
                     <div class="card-single">
                         <div>
-                            <h1>54</h1>
-                            <span>Customers</span>
+                            <h1>45</h1>
+                            <span>Customers bought your items.<br><a href="#">View items sold</a></span>
                         </div>
                         <div>
                             <span class="las la-users"></span>
@@ -113,8 +108,8 @@
 
                     <div class="card-single">
                         <div>
-                            <h1>79</h1>
-                            <span>Projects</span>
+                            <h1>68</h1>
+                            <span>Uploaded items. <small>Last uploaded on 24/08/2022</small><br><a href="#">More info</a></span>
                         </div>
                         <div>
                             <span class="las la-clipboard-list"></span>
@@ -124,7 +119,7 @@
                     <div class="card-single">
                         <div>
                             <h1>124</h1>
-                            <span>Orders</span>
+                            <span>Orders recived <br><a href="#">See History</a></span>
                         </div>
                         <div>
                             <span class="las la-shopping-bag"></span>
@@ -133,8 +128,8 @@
 
                     <div class="card-single">
                         <div>
-                            <h1>£6k</h1>
-                            <span>Income</span>
+                            <h1>£10k</h1>
+                            <span>Income. <br><small>This is how much you made 28 days ago</small></span>
                         </div>
                         <div>
                             <span class="lab la-google-wallet"></span>
@@ -147,7 +142,7 @@
                     <div class="projects">
                         <div class="card">
                             <div class="card-header">
-                                <h3>Recent Projects</h3>
+                                <h3>History of Activity</h3>
                                 <button>See all <span class="las la-arrow-right"></span></button>
                             </div>
                             
@@ -156,42 +151,42 @@
                                     <table width="100%">
                                         <thead>
                                             <tr>
-                                                <td>Project Title</td>
-                                                <td>Department</td>
-                                                <td>Status</td>
+                                                <td>Item | Quantity</td>
+                                                <td>Date</td>
+                                                <td>Revenue</td>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>UI/UX Design</td>
-                                                <td>UI Team</td>
-                                                <td><span class="status purple">Review</span></td>
+                                                <td>Nike shoes, size:38 (1)</td>
+                                                <td>05/04/2022</td>
+                                                <td><span class="status purple">£78(Sold)</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Web Development</td>
-                                                <td>Frontend</td>
-                                                <td><span class="status pink">in progress</span></td>
+                                                <td>Pairs of trousers (2)</td>
+                                                <td>30/05/2022</td>
+                                                <td><span class="status pink">£68(Sold)</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Ushop app</td>
-                                                <td>Mobile Team</td>
-                                                <td><span class="status orange">pending</span></td>
+                                                <td>M1 MacBook Air (4)</td>
+                                                <td>28/06/2022</td>
+                                                <td><span class="status orange">£3020(Sold)</span></td>
                                             </tr>
     
                                             <tr>
-                                                <td>UI/UX Design</td>
-                                                <td>UI Team</td>
-                                                <td><span class="status purple">Review</span></td>
+                                                <td>DELL Laptop 2019 (1)</td>
+                                                <td>07/07/2022</td>
+                                                <td><span class="status purple">£450(Sold)</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Web Development</td>
-                                                <td>Frontend</td>
-                                                <td><span class="status pink">in progress</span></td>
+                                                <td>M1 MacBook Pro, 13" (2)</td>
+                                                <td>07/07/2022</td>
+                                                <td><span class="status pink">£1000(Sold)</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Ushop app</td>
-                                                <td>Mobile Team</td>
-                                                <td><span class="status orange">pending</span></td>
+                                                <td>LA Oversized T-shirt (1)</td>
+                                                <td>01/08/2022</td>
+                                                <td><span class="status orange">Pending</span></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -210,10 +205,10 @@
                             <div class="card-body">
                                 <div class="customer">
                                     <div class="info">
-                                        <img src="/static/image/profile-teddy-smile.jpg" width="40px" height="40px" alt="">
+                                        <img src="profile-teddy-smile.jpg" width="40px" height="40px" alt="">
                                         <div>
                                             <h4>Nadia F. Angelini</h4>
-                                            <small>CEO Excerpt</small>
+                                            <small>liked an item</small>
                                         </div>
                                     </div>
                                     <div class="contact">
@@ -225,10 +220,10 @@
 
                                <div class="customer">
                                 <div class="info">
-                                    <img src="/static/image/profile-teddy-smile.jpg" width="40px" height="40px" alt="">
+                                    <img src="profile-teddy-smile.jpg" width="40px" height="40px" alt="">
                                     <div>
-                                        <h4>Nadia F. Angelini</h4>
-                                        <small>CEO Excerpt</small>
+                                        <h4>Andera Fernandi</h4>
+                                        <small>is requesting for item</small>
                                     </div>
                                 </div>
                                 <div class="contact">
@@ -244,8 +239,6 @@
                 </div>
             </main>
         </div>
-
-
 
     </body>
 </html>
