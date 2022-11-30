@@ -14,6 +14,7 @@
     of the page-->
 </head>
 <body>
+    {% block content %}
     <div class="container">
         <div class="form-box">
             <h1 id="title">Sign Up</h1>
@@ -50,5 +51,6 @@
     </div>
 
     <script src="/static/js/modal.js"></script>
+{% endblock content %}
 </body>
 </html>

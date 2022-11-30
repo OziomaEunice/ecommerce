@@ -16,7 +16,8 @@
             of the page-->
     </head>
 <body>
-      
+    {% block content %}
+
     <!--Credit to https://www.youtube.com/watch?v=2x7Gwr4V47w&ab_channel=sakaos for code-->
     <div>
         <nav>
@@ -26,7 +27,7 @@
             </label>
             <label class="logo">E-commerce</label> <!--Sort of header (or logo) in the navbar-->
             <ul> <!--This are sections in the navbar-->
-                <li><a href="#">Home</a></li>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a class="active" href="#shop">Shop</a></li>
                 <li><img src="/static/image/cat.jpg" class="user-pic" onclick="openMenu()"></li>
@@ -69,6 +70,7 @@
         </nav>
     </div>
     
+    {% block section %}
     <div>
         <h2 style="font-size: 40px; color:rgb(8, 6, 66); margin-top:30px; margin-left:30px;">SHOP BY CATEGORY</h2>
     </div>
@@ -234,11 +236,12 @@
             <button><a href="" style="text-decoration: none; color:white;">View Item</a></button>
         </div>
     </section>
-
+    {% endblock section %}
 
     <div class="select"></div>
 
     
     <script src="/static/js/shop.js"></script>
+{% endblock content %}
 </body>
 </html>
